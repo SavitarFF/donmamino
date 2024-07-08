@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Mejorada</title>
+    <!-- Font Awesome for social icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #006400;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+        }
+
+        .contact-icons img {
+            width: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .carousel-container {
+            margin-top: 80px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 60vh;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .footer {
+            background-color: #006400;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer .social-icons a {
+            margin: 0 15px;
+            color: #ffcc00;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .footer .social-icons a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Historia</a>
+            <a href="#">Tienda Online</a>
+            <a href="#">Carta</a>
+            <a href="#">Locales</a>
+            <a href="#">Trabaja con Nosotros</a>
+            <a href="#">Sugerencias</a>
+        </div>
+        <div class="contact-icons">
+            <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+            <a href="#"><img src="shopping-cart-icon.png" alt="Shopping Cart"></a>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('image1.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('image2.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('image3.jpg');"></div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Horarios de Atención</h5>
+                    <p>Monterrico, La Molina, Chacarilla, Miraflores y San Isidro: 7:00 am a 11:00 pm</p>
+                    <p>Open Plaza Angamos, Real Plaza Salaverry y Plaza Norte: 8:00 am a 10:00 pm</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contáctenos</h5>
+                    <p>WhatsApp: 986206731</p>
+                    <p>Teléfono: 719-7000</p>
+                    <p>Correo: centraldepedidos@donmamino.com</p>
+                    <p>GRUPO ONCE S.A.C - RUC: 20125966860</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociales</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper.js JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
